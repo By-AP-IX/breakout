@@ -45,8 +45,7 @@ static partial class Program
     /// <summary>Remet le jeu dans son état de départ.</summary>
     static void Reinitialiser()
     {
-        // /\
-        positionRaquette.X = (LARGEUR - LARGEUR_BRIQUE) / 2;
+        positionRaquette.X = (LARGEUR - LARGEUR_RAQUETTE) / 2;
         positionRaquette.Y = HAUTEUR - MARGE_BAS_RAQUETTE;
     }
 
@@ -54,6 +53,12 @@ static partial class Program
     static void MettreAJourAttente(float dt)
     {
         DeplacerRaquette(dt);
+        CollerBalleARaquette();
+        if (Raylib.IsKeyPressed(KeyboardKey.Space))
+        {
+            LancerBalle();
+            etat = EtatJeu.Jeu;
+        }
     }
 
     /// <summary>Une image de jeu dans l'état Jeu.</summary>

@@ -7,11 +7,15 @@ static partial class Program
     /// <summary>Pose la balle au milieu du dessus de la raquette.</summary>
     static void CollerBalleARaquette()
     {
+        positionBalle.X = positionRaquette.X + (LARGEUR_RAQUETTE/2);
+        positionBalle.Y = (positionRaquette.Y - HAUTEUR_RAQUETTE) + (RAYON_BALLE);
     }
 
     /// <summary>Donne à la balle sa vitesse de départ.</summary>
     static void LancerBalle()
     {
+        vitesseBalle.X = VITESSE_BALLE;
+        vitesseBalle.Y = VITESSE_BALLE;
     }
 
     /// <summary>Avance la balle selon sa vitesse.</summary>
