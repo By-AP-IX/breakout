@@ -24,5 +24,13 @@ static partial class Program
     /// <summary>Dessine les briques encore présentes, une couleur par ligne.</summary>
     static void DessinerBriques()
     {
+        for (int i = 1; i <= LIGNES_BRIQUES; i++)
+        {
+            // 1 = rectangles rouges, 2 = rectangles oranges, 3 = rectangles jaunes
+            for (int j = 1; j <= COLONNES_BRIQUES; j++)
+            {
+                // créer rectangles       
+            }
+        }
     }
 }
