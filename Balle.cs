@@ -22,7 +22,7 @@ static partial class Program
     static void DeplacerBalle(float dt)
     {
         positionBalle.X += vitesseBalle.X * dt;
-        positionBalle.Y += vitesseBalle.Y * dt;
+        positionBalle.Y -= vitesseBalle.Y * dt;
     }
 
     /// <summary>Fait rebondir la balle sur les murs gauche, droit et haut.</summary>
